@@ -1,11 +1,11 @@
 <div class="login-content">
     <div class="login-card">
-        <p>Usa tu cuenta <span class="store">Minecraft</span> para conectarse al launcher.</p>
+        <p style="margin-left: auto; margin-right: auto;">¡Richi Launcher!<br>Para jugar tendras que colocar el nombre que usaras.</p>
         <div class="login-type">
             <button class="mojang login-type-btn">Mojang</button>
             <button class="microsoft login-type-btn">Microsoft</button>
         </div>
-        <button class="cancel cancel-login" style="display: none;">Cancelar</button>
+        <button class="cancel cancel-login" style="display: none;">Atras</button>
     </div>
 
     <div class="login-card-mojang">
@@ -13,14 +13,22 @@
             <small class="info-login">&nbsp;</small>
 
             <div class="login-card-mojang-input">
-                <label>Nombre de usuario</label>
+                <img src="assets/images/logologin.png" weight="253" height="76" style="margin-right: auto; margin-left: auto; margin-bottom: 30px;">
+                <label class="username-info">Nombre de Usuario</label>
                 <input type="text" class="Mail login-mojang-input" spellcheck="false">
                 <small class="error-mail">&nbsp;</small>
             </div>
 
+            <div class="login-card-mojang-input" style="display: none;">
+                <label>Contraseña</label>
+                <input type="password" class="Password login-mojang-input" spellcheck="false">
+                <small class="error-password">&nbsp;</small>
+            </div>
+
             <div class="login-options">
+                <span class="password-reset"></span>
                 <div class="btn-option-login">
-                    <button class="login-btn">Entrar</button>
+                    <button class="login-btn">Iniciar</button>
                     <button class="cancel cancel-mojang">Cancelar</button>
                 </div>
             </div>
