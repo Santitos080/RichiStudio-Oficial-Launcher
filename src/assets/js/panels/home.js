@@ -35,12 +35,12 @@ class Home {
                 blockNews.innerHTML = `
                     <div class="news-header">
                         <div class="header-text">
-                            <div class="title">Aucun news n'ai actuellement disponible.</div>
+                            <div class="title">No hay noticias disponibles actualmente.</div>
                         </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>Vous pourrez suivre ici toutes les news relative au serveur.</p>
+                            <p>Puedes seguir todas las novedades relativas al servidor aquí.</p>
                         </div>
                     </div>`
                 news.appendChild(blockNews);
@@ -79,7 +79,7 @@ class Home {
                 </div>
                 <div class="news-content">
                     <div class="bbWrapper">
-                        <p>Impossible de contacter le serveur des news.</br>Merci de vérifier votre configuration.</p>
+                        <p>No se puede contactar con el servidor de noticias.</br>Por favor verifique su configuración.</p>
                     </div>
                 </div>`
             news.appendChild(blockNews);
@@ -173,7 +173,7 @@ class Home {
 
             launch.on('patch', patch => {
                 console.log(patch);
-                info.innerHTML = `Patch en cours...`
+                info.innerHTML = `Parche en progreso...`
             });
 
             launch.on('data', (e) => {
@@ -181,7 +181,7 @@ class Home {
                 if (launcherSettings.launcher.close === 'close-launcher') ipcRenderer.send("main-window-hide");
                 ipcRenderer.send('main-window-progress-reset')
                 progressBar.style.display = "none"
-                info.innerHTML = `Demarrage en cours...`
+                info.innerHTML = `Empezando...`
                 console.log(e);
             })
 
@@ -190,7 +190,7 @@ class Home {
                 progressBar.style.display = "none"
                 info.style.display = "none"
                 playBtn.style.display = "block"
-                info.innerHTML = `Vérification`
+                info.innerHTML = `verificación`
                 new logger('Launcher', '#7289da');
                 console.log('Close');
             });
@@ -214,8 +214,8 @@ class Home {
             online.classList.toggle("off");
             playersConnected.textContent = serverPing.playersConnect;
         } else if (serverPing.error) {
-            nameServer.textContent = 'Serveur indisponible';
-            serverMs.innerHTML = `<span class="red">Hors ligne</span>`;
+            nameServer.textContent = 'Servidor no disponible';
+            serverMs.innerHTML = `<span class="red">Fuera de linea</span>`;
         }
     }
 
