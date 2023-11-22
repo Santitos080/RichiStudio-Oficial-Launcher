@@ -70,7 +70,7 @@ class Home {
             }
         } else {
             let blockNews = document.createElement('div');
-            blockNews.classList.add('news-block', 'opacity-1');
+            blockNews.classList.add('news-block', 'opacity-0');
             blockNews.innerHTML = `
                 <div class="news-header">
                     <div class="header-text">
@@ -147,7 +147,7 @@ class Home {
 
             launch.on('progress', (progress, size) => {
                 progressBar.style.display = "block"
-                document.querySelector(".text-download").innerHTML = `Téléchargement ${((progress / size) * 100).toFixed(0)}%`
+                document.querySelector(".text-download").innerHTML = `Descargar ${((progress / size) * 100).toFixed(0)}%`
                 ipcRenderer.send('main-window-progress', { progress, size })
                 progressBar.value = progress;
                 progressBar.max = size;
@@ -191,7 +191,7 @@ class Home {
                 info.style.display = "none"
                 playBtn.style.display = "block"
                 info.innerHTML = `verificación`
-                new logger('Launcher', '#7289da');
+                new logger('Launcher', '#c8cde0');
                 console.log('Close');
             });
 

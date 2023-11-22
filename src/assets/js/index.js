@@ -22,7 +22,7 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "creador...", "author": "Kxv1nn" },
+            { "message": "RichiStudio Launcher...", "author": "Kxv1nn" },
             { "message": "hola soy.", "author": "Kxv1nn" },
             { "message": "Linux no tiene sistema operativo, sino kernel.", "author": "Kxv1nn" }
         ]
